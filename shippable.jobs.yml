@@ -22,6 +22,8 @@ jobs:
     steps:
       - IN: shipdemo-manifest
       - IN: kube-cluster
+      - TASK:
+        - script: printenv
       - TASK: managed
         deployMethod: upgrade
 
