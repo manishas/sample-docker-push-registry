@@ -24,3 +24,10 @@ jobs:
       - IN: kube-cluster
       - TASK: managed
         deployMethod: upgrade
+
+  - name: testEnv
+    type: runSh
+    steps:
+      - IN: kube-deploy
+      - TASK:
+        - script: printenv
